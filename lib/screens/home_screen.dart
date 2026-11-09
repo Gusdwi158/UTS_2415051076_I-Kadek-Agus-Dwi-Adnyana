@@ -40,27 +40,32 @@ class HomeScreen extends StatelessWidget {
 
   Widget _buildWideLayout() {
     return Center(
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: const [
-          Icon(Icons.coffee_maker, size: 120, color: Colors.brown),
-          SizedBox(width: 40),
-          Column(
-            mainAxisSize: MainAxisSize.min,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                'Selamat Datang di CafeFinder',
-                style: TextStyle(fontSize: 32, fontWeight: FontWeight.bold),
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 24.0),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: const [
+            Icon(Icons.coffee_maker, size: 120, color: Colors.brown),
+            SizedBox(width: 40),
+            Flexible(
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    'Selamat Datang di CafeFinder',
+                    style: TextStyle(fontSize: 32, fontWeight: FontWeight.bold),
+                  ),
+                  SizedBox(height: 10),
+                  Text(
+                    'Temukan tempat ngopi favoritmu di Buleleng!',
+                    style: TextStyle(fontSize: 18),
+                  ),
+                ],
               ),
-              SizedBox(height: 10),
-              Text(
-                'Temukan tempat ngopi favoritmu di Buleleng!',
-                style: TextStyle(fontSize: 18),
-              ),
-            ],
-          ),
-        ],
+            ),
+          ],
+        ),
       ),
     );
   }

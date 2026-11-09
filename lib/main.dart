@@ -13,6 +13,7 @@ void main() async {
   // TODO: Masukkan URL dan Anon Key dari Project Settings Supabase Anda
   await Supabase.initialize(
     url: 'https://emxzhrzzoeqvtwklcnyi.supabase.co',
+    // ignore: deprecated_member_use
     anonKey: 'sb_publishable_mlxrfaAf1fnlk9a6BaJK9w_jbT8ArXw',
   );
 

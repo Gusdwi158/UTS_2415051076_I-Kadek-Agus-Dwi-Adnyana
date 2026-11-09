@@ -4,6 +4,7 @@ class Cafe {
   final String location;
   final String description;
   final String imageUrl;
+  final double rating;
 
   Cafe({
     required this.id,
@@ -11,6 +12,7 @@ class Cafe {
     required this.location,
     required this.description,
     required this.imageUrl,
+    this.rating = 0.0,
   });
 
   // Fungsi untuk mengubah JSON dari API menjadi Object Dart
@@ -21,6 +23,9 @@ class Cafe {
       location: json['location'] ?? 'Lokasi Tidak Diketahui',
       description: json['description'] ?? 'Tidak ada deskripsi.',
       imageUrl: json['image_url'] ?? 'https://via.placeholder.com/150',
+      rating: json['rating'] != null
+          ? double.tryParse(json['rating'].toString()) ?? 0.0
+          : 0.0,
     );
   }
 }

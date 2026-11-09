@@ -2,8 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import '../providers/cafe_provider.dart';
-
-// import 'cafe_detail_screen.dart'; // Akan dibuat di tahap selanjutnya
+import 'cafe_detail_screen.dart';
 
 class CafeListScreen extends StatelessWidget {
   const CafeListScreen({super.key});
@@ -53,15 +52,12 @@ class CafeListScreen extends StatelessWidget {
                   subtitle: Text(cafe.location),
                   trailing: const Icon(Icons.arrow_forward_ios, size: 16),
                   onTap: () {
-                    // Nanti kita arahkan ke Detail Screen dengan passing data
-                    /*
                     Navigator.push(
                       context,
                       MaterialPageRoute(
                         builder: (context) => CafeDetailScreen(cafe: cafe),
                       ),
                     );
-                    */
                   },
                 ),
               );
