@@ -5,12 +5,13 @@ import 'package:supabase_flutter/supabase_flutter.dart';
 import 'providers/cafe_provider.dart';
 import 'screens/home_screen.dart';
 import 'screens/cafe_list_screen.dart';
+import 'screens/favorite_screen.dart';
 import 'screens/profile_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-  // TODO: Masukkan URL dan Anon Key dari Project Settings Supabase Anda
+  // Ganti dengan URL dan Anon Key asli dari proyek Supabase milikmu
   await Supabase.initialize(
     url: 'https://emxzhrzzoeqvtwklcnyi.supabase.co',
     // ignore: deprecated_member_use
@@ -60,6 +61,7 @@ class _MainNavigationState extends State<MainNavigation> {
   final List<Widget> _screens = [
     const HomeScreen(),
     const CafeListScreen(),
+    const FavoriteScreen(),
     const ProfileScreen(),
   ];
 
@@ -77,6 +79,7 @@ class _MainNavigationState extends State<MainNavigation> {
         destinations: const [
           NavigationDestination(icon: Icon(Icons.home), label: 'Home'),
           NavigationDestination(icon: Icon(Icons.coffee), label: 'Katalog'),
+          NavigationDestination(icon: Icon(Icons.favorite), label: 'Favorit'),
           NavigationDestination(icon: Icon(Icons.person), label: 'Profile'),
         ],
       ),
